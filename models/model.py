@@ -2,11 +2,13 @@ import os
 
 import tensorflow as tf
 
+MODEL_DATA_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data')
+
 # training crack images
-train_crack_dir = '../data/train/crack'
+train_crack_dir = os.path.join(MODEL_DATA_PATH, 'train/crack')
 
 # training no_crack images
-train_no_crack_dir = '../data/train/no_crack'
+train_no_crack_dir = os.path.join(MODEL_DATA_PATH, 'train/no_crack')
 
 print('total training crack images:', len(os.listdir(train_crack_dir)))
 print('total training no_crack images:', len(os.listdir(train_no_crack_dir)))
@@ -33,10 +35,10 @@ model.compile(loss='binary_crossentropy',
 train_datagen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1/255)
 validation_datagen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1/255)
 
-train_generator = train_datagen.flow_from_directory('../data/train',
+train_generator = train_datagen.flow_from_directory(os.path.join(MODEL_DATA_PATH, 'train'),
                                                     target_size=(128, 128), batch_size=100, class_mode='binary')
 
-validation_generator = train_datagen.flow_from_directory('../data/validation',
+validation_generator = train_datagen.flow_from_directory(os.path.join(MODEL_DATA_PATH, 'validation'),
                                                          target_size=(128, 128), batch_size=10, class_mode='binary')
 
 history = model.fit_generator(

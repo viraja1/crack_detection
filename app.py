@@ -1,6 +1,7 @@
 from __future__ import division, print_function
 # coding=utf-8
 
+import os
 import io
 
 import numpy as np
@@ -13,7 +14,7 @@ from flask import Flask, request, render_template, jsonify
 app = Flask('crack_detection')
 
 # Model saved with Keras model.save()
-MODEL_PATH = 'models/crack_detection.h5'
+MODEL_PATH = os.path.join(os.path.dirname(__file__), 'models', 'crack_detection.h5')
 
 # Load trained model
 model = tf.keras.models.load_model(MODEL_PATH)
