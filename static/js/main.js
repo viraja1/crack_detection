@@ -46,7 +46,7 @@ $(document).ready(function () {
                 // Get and display the result
                 $('.loader').hide();
                 $('#result').fadeIn(600);
-                $('#result').text(' Result:  ' + response.class);
+                $('#result').text(' Result:  ' + response.prediction);
             },
         });
     });
