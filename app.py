@@ -25,7 +25,7 @@ print('Model loaded. Check http://127.0.0.1:8080/')
 
 
 def predict(img, model):
-    img = img.resize((150, 150))
+    img = img.resize((128, 128))
     x = tf.keras.preprocessing.image.img_to_array(img)
     x = np.expand_dims(x, axis=0)
     images = np.vstack([x])
