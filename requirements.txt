@@ -1,0 +1,7 @@
+gevent==1.4.0
+Werkzeug==0.15.2
+Flask==1.0.2
+pillow==6.0.0
+tensorflow==2.0.0-alpha0
+numpy==1.16.3
+scipy==1.2.1
