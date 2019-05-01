@@ -40,3 +40,10 @@
 ## Screenshot
 
 ![](screenshots/crack.gif)
+
+## Credits
+* Dataset - Concrete Crack Images for Classification (https://data.mendeley.com/datasets/5y9wdsg2zt/1/)
+* Deploy Keras Model with Flask as Web App
+  (https://github.com/mtobeiyf/keras-flask-deploy-webapp)
+* Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning
+  (https://www.coursera.org/learn/introduction-tensorflow)
