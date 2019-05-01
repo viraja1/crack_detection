@@ -19,6 +19,7 @@
 4) Train Model 
    
    Skip this step if you want to use pretrained model
+   
    Tested with python 3.7
    ```
    $ python models/model.py
