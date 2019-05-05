@@ -50,4 +50,4 @@ history = model.fit_generator(
       validation_steps=8
 )
 
-model.save('crack_detection.h5')
+model.save(os.path.join(os.path.dirname(__file__), 'crack_detection.h5'))
